@@ -12,7 +12,7 @@ describe("MultiSig Contract Tests", function () {
     const multiSig = await MultiSig.deploy(
       [address1.address, address2.address, address3.address, address4.address],
       2,
-      { value: hre.ethers.parseEther("1") }
+      { value: hre.ethers.parseEther("0.06") }
     );
 
     return {
@@ -92,7 +92,7 @@ describe("MultiSig Contract Tests", function () {
         );
 
         const newSigner = {
-          address: "0x71bE63f3384f5fb98995898A86B02Fb2426c5788",
+          address: "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
         };
         await multiSig.connect(owner).addValidSigner(newSigner.address);
       });
